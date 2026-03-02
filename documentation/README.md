@@ -25,10 +25,9 @@ revenue through better route and timing decisions.
 
 ## Proof of Dataset legitimacy
 -Taxi rides dataset url(Taxi)
-![NYC Taxi dataset from official city records showing ride statistics, fare information, and pickup/dropoff locations for 2024 analysis](image-2.png)
-
+![NYC Taxi dataset from official city records showing ride statistics, fare information, and pickup/dropoff locations for 2024 analysis](image-4.png)
 - Taxi rides website evidence
-![NYC Taxi dataset website homepage displaying ride data, fare calculations, and location information for 2024 taxi analytics project](image-3.png)
+![NYC Taxi dataset website homepage displaying ride data, fare calculations, and location information for 2024 taxi analytics project](image-5.png)
 
 # Business Questions (Minimum 5)
 
