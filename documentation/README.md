@@ -8,7 +8,8 @@
 - Mohamed 006
 - Mitchel 413
 - Calvin 035
-- Claire 
+- Claire 470
+- Lavender 
 
 
 # Week 6 - Proposal
@@ -29,7 +30,7 @@ revenue through better route and timing decisions.
 - Taxi rides website evidence
 ![NYC Taxi dataset website homepage displaying ride data, fare calculations, and location information for 2024 taxi analytics project](image-5.png)
 
-# Business Questions (Minimum 5)
+## Business Questions
 
 1. What are the peak hours and days for taxi demand across different neighborhoods?
 2. Which neighborhoods generate the highest trip volumes and revenue?
@@ -39,9 +40,9 @@ revenue through better route and timing decisions.
 6. How many passengers typically ride together and does this affect trip distance?
 7. What is the relationship between pickup and dropoff neighborhoods (commuter patterns)?
 
-# Entity Relationship Diagram Draft
+## Entity Relationship Diagram Draft
 
-## Source Tables
+### Source Tables
 
 **trips_1.csv** (Fact Table - 50,000+ rows)
 - id (Primary Key)
@@ -67,7 +68,7 @@ revenue through better route and timing decisions.
 - neighborhood_id (Primary Key)
 - neighborhood_name
 
-## Planned Star Schema
+### Planned Star Schema
 
 **Fact Table:**
 - FactTrips (id, date_key, vendor_id, passenger_count, trip_distance, 
@@ -80,7 +81,7 @@ revenue through better route and timing decisions.
 - DimPayment (payment_key, payment_code, payment_description)
 - DimVendor (vendor_key, vendor_id, vendor_name)
 
-# Data Source
+## Data Source
 
 **Dataset:** New York City taxi rides
 **Source:** Kaggle (https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides)
@@ -89,6 +90,28 @@ revenue through better route and timing decisions.
 - pickup_neighborhoods.csv (Pickup location lookup)
 - dropoff_neighborhoods.csv (Dropoff location lookup)
 
-## Data Citation
+### Data Citation
 Ramireddy, S. (2023). New York City taxi rides [Data set]. Kaggle. 
 https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides
+
+
+# Week 8 - Power query Transformations
+
+#### loading data into POWER BI
+loading all 3 datasets to powerBI for Transformation
+![dropoff_neigbourhoods](image-6.png)
+
+![pickup_neighbourhoods](image-7.png)
+
+![trips](image-8.png)
+
+#### Renaming the Queries
+- trips_1 → FACT_trips
+- pickup_neighborhoods → DIM_Pickup_hood
+- dropoff_neighborhoods → DIM_Dropoff_hood
+
+![renamed tables, 1 fact, 2 Dimensions](image-9.png)
+
+## Transformations:
+
+###
