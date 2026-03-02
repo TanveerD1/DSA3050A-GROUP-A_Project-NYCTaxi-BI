@@ -3,19 +3,93 @@
 ### Power BI Business Intelligence Project
 
 **Course:** DSA3050A – Business Intelligence & Data Visualization
-**Student:** Tanveer
-**Student ID:** 752
+**Students:** 
+- Tanveer 762
+- Mohamed 006
+- Mitchel 413
+- Calvin 035
+- Claire 
 
----
-# Week 1 - Proposal
+
+# Week 6 - Proposal
+
+# Problem Statement
+
+New York City's taxi operations face challenges in optimizing fleet utilization, 
+understanding passenger demand patterns, and maximizing revenue across different 
+neighborhoods and time periods. This project analyzes NYC taxi trip data to 
+identify operational inefficiencies, peak demand periods, and neighborhood-level 
+performance metrics. The goal is to provide data-driven recommendations for 
+improving taxi availability, reducing passenger wait times, and increasing driver 
+revenue through better route and timing decisions.
+
+## Proof of Dataset legitimacy
 -Taxi rides dataset url(Taxi)
-![alt text](image-2.png)
+![NYC Taxi dataset from official city records showing ride statistics, fare information, and pickup/dropoff locations for 2024 analysis](image-2.png)
 
 - Taxi rides website evidence
-![alt text](image-3.png)
--
+![NYC Taxi dataset website homepage displaying ride data, fare calculations, and location information for 2024 taxi analytics project](image-3.png)
 
+# Business Questions (Minimum 5)
 
+1. What are the peak hours and days for taxi demand across different neighborhoods?
+2. Which neighborhoods generate the highest trip volumes and revenue?
+3. How does trip distance correlate with fare amount and payment type?
+4. What is the average trip duration and how does it vary by time of day?
+5. Which payment methods are most common and how do they vary by neighborhood?
+6. How many passengers typically ride together and does this affect trip distance?
+7. What is the relationship between pickup and dropoff neighborhoods (commuter patterns)?
 
--
--
+# Entity Relationship Diagram Draft
+
+## Source Tables
+
+**trips_1.csv** (Fact Table - 50,000+ rows)
+- id (Primary Key)
+- vendor_id
+- pickup_datetime
+- dropoff_datetime
+- passenger_count
+- trip_distance
+- pickup_longitude
+- pickup_latitude
+- dropoff_longitude
+- dropoff_latitude
+- payment_type (1-6 code)
+- trip_duration
+- pickup_neighborhood (FK to pickup_neighborhoods)
+- dropoff_neighborhood (FK to dropoff_neighborhoods)
+
+**pickup_neighborhoods.csv** (Dimension)
+- neighborhood_id (Primary Key)
+- neighborhood_name
+
+**dropoff_neighborhoods.csv** (Dimension)
+- neighborhood_id (Primary Key)
+- neighborhood_name
+
+## Planned Star Schema
+
+**Fact Table:**
+- FactTrips (id, date_key, vendor_id, passenger_count, trip_distance, 
+  payment_type, trip_duration, pickup_neighborhood_key, dropoff_neighborhood_key)
+
+**Dimension Tables:**
+- DimDate (date_key, date, year, month, day, day_of_week, hour, quarter)
+- DimPickupNeighborhood (neighborhood_key, neighborhood_id, neighborhood_name)
+- DimDropoffNeighborhood (neighborhood_key, neighborhood_id, neighborhood_name)
+- DimPayment (payment_key, payment_code, payment_description)
+- DimVendor (vendor_key, vendor_id, vendor_name)
+
+# Data Source
+
+**Dataset:** New York City taxi rides
+**Source:** Kaggle (https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides)
+**Files:**
+- trips_1.csv (Main trip records)
+- pickup_neighborhoods.csv (Pickup location lookup)
+- dropoff_neighborhoods.csv (Dropoff location lookup)
+
+## Data Citation
+Ramireddy, S. (2023). New York City taxi rides [Data set]. Kaggle. 
+https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides
