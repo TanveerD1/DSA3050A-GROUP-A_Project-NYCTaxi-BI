@@ -1,4 +1,4 @@
-# 🚗 Uber Data Analytics Dashboard 2024 or New YorK City Taxi Rides
+# 🚗 New YorK City Taxi Rides
 
 ### Power BI Business Intelligence Project
 
