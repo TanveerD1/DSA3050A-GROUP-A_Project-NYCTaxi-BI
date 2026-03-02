@@ -180,38 +180,66 @@ We decided to get rid of pickup longitude and lattitude as well as drop off long
 ![final dropoff datetime](image-21.png)
 
 #### **Passenger Count**
+This needs to be whole numbers
 
 **Original**
 
-
+![passenger counts as floats](image-22.png)
 
 **Transformation**
 
+![transforming passenger counts to whole numbers](image-23.png)
+
 **Final**
 
-**Dropoff Datetime**
+![fixed passenger counts](image-24.png)
+
+#### **Splitting datetime columns**
+
+##### **Date Only Columns**
 
 **Original**
 
+![piuckup and dropoff originals](image-25.png)
+
 **Transformation**
+
+![changind to date only](image-26.png)
 
 **Final**
 
-**Dropoff Datetime**
+![pickup and dropoff date only](image-27.png)
+
+##### **Time Only Columns**
 
 **Original**
 
+![piuckup and dropoff originals](image-25.png)
+
 **Transformation**
+
+![time transformation](image-28.png)
 
 **Final**
 
-**Dropoff Datetime**
+![pickup and dropoff time only extracted columns](image-29.png)
+
+#### **Creating Conditional Column (Peak Hours)**
+Creating a new column called pickup and dropoff time Time Category labelling peak hours and off peak hours
 
 **Original**
 
+![original hours](image-31.png)
+
 **Transformation**
 
+![pickup time category formula](image-33.png)
+![dropoff time category formula](image-34.png)
+
 **Final**
+
+![final pickup and dropoff times](image-35.png)
+
 
 **Original**
 
