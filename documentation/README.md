@@ -114,4 +114,113 @@ loading all 3 datasets to powerBI for Transformation
 
 ## Transformations:
 
-###
+### Promoting headers
+**On FACT_trips table**
+
+**Original**
+
+![original unpromoted headers](image-10.png)
+
+**Transformation**
+
+![promoting headers](image-11.png)
+
+**Final**
+
+![promoted headers](image-12.png)
+
+### Removing Unnecessary Columns
+
+**On FACT_trips table**
+
+We decided to get rid of pickup longitude and lattitude as well as drop off longitude and lattitude as they exist in the Dimension tables and are redundant for the FACT table.
+
+**Original**
+
+![unnecesary as exist in DIM tables](image-13.png)
+
+**Transformation**
+
+![removing pickup and dropoff lattitudes and longitudes](image-14.png)
+
+**Final**
+
+![removed columns](image-15.png)
+
+### Fixing Data Types
+
+**On FACT_trips table**
+
+#### **Pickup Datetime**
+
+**Original**
+
+![original pickup datetime](image-16.png)
+
+**Transformation**
+
+![transforming datetime](image-17.png)
+
+**Final**
+
+![alt text](image-18.png)
+
+#### **Dropoff Datetime**
+
+**Original**
+
+![original dropoff time as text](image-19.png)
+
+**Transformation**
+
+![transforming dropoff time](image-20.png)
+
+**Final**
+
+![final dropoff datetime](image-21.png)
+
+#### **Passenger Count**
+
+**Original**
+
+
+
+**Transformation**
+
+**Final**
+
+**Dropoff Datetime**
+
+**Original**
+
+**Transformation**
+
+**Final**
+
+**Dropoff Datetime**
+
+**Original**
+
+**Transformation**
+
+**Final**
+
+**Dropoff Datetime**
+
+**Original**
+
+**Transformation**
+
+**Final**
+
+**Original**
+
+**Transformation**
+
+**Final**
+
+**Original**
+
+**Transformation**
+
+**Final**
