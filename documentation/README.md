@@ -97,7 +97,7 @@ https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides
 
 # Week 8 - Power query Transformations
 
-#### loading data into POWER BI
+#### Loading data into POWER BI
 loading all 3 datasets to powerBI for Transformation
 ![dropoff_neigbourhoods](image-6.png)
 
