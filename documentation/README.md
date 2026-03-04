@@ -379,8 +379,32 @@ Speed column created using distance / duration /3600seconds to convert it into h
 ![dimpayments table](image-67.png)
 
 # **Creating Relationship Models**
+- Dim_date to FACT
 
-#### **TEXT**
+![dim date to fact](image-68.png)
+
+- Dim_hour to FACT
+
+![dim hour to fact](image-69.png)
+
+- Dim_Payment to FACT
+
+![DIM payment to FACT](image-70.png)
+
+- DIM Dropoffs to FACT
+
+![DIM Dropoffs to FACT](image-71.png)
+
+- DIM Pickup to FACT
+
+![pickup dim to fact](image-72.png)
+
+
+## **STAR SCHEMA**
+Dimension to FACT is alwasy one to MANY!
+
+![STAR SCHEMA](image-73.png)
+
 **Original**
 
 **Transformation**
