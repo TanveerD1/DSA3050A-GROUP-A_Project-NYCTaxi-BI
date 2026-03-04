@@ -405,6 +405,9 @@ Dimension to FACT is alwasy one to MANY!
 
 ![STAR SCHEMA](image-73.png)
 
+# ADDITIONAL WRANGLING:
+
+
 **Original**
 
 **Transformation**
