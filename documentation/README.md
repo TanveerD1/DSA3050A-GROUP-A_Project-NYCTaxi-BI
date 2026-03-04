@@ -240,13 +240,109 @@ Creating a new column called pickup and dropoff time Time Category labelling pea
 
 ![final pickup and dropoff times](image-35.png)
 
+#### **Handling Null Values**
+**DIM_Dropoff_hoods Table**
 
+**Original**
+We can see from the image that we indeed have nulls that need to be handled
+
+![alt text](image-36.png)
+
+**Transformation**
+
+REMOVING EMPTY
+
+![alt text](image-37.png)
+
+**Final**
+No more NULLS
+
+![alt text](image-38.png)
+
+
+#### **Filtering OUTLIERS**
+We can see from the FACT Table in the trip_distance column that there are some distances marked as 0 distance. This is an outlier and will affect visualizations as well as confound our observations.
+
+**Original**
+
+![alt text](image-39.png)
+
+**Transformation**
+
+We decided to filter for numbers greater than zero
+
+![alt text](image-40.png)
+
+**Final**
+
+We can now see that there is no zero value
+
+![alt text](image-41.png)
+
+#### **TEXT**
 **Original**
 
 **Transformation**
 
 **Final**
 
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
 **Original**
 
 **Transformation**
