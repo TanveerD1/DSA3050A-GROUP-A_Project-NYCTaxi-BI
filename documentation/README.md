@@ -368,12 +368,17 @@ Speed column created using distance / duration /3600seconds to convert it into h
 
 ![DIM_time created](image-65.png)
 
-#### **TEXT**
-**Original**
+## **Create DimPayment (to decode payment types)**
 
 **Transformation**
 
+![dim_payments dax](image-66.png)
+
 **Final**
+
+![dimpayments table](image-67.png)
+
+# **Creating Relationship Models**
 
 #### **TEXT**
 **Original**
