@@ -246,18 +246,18 @@ Creating a new column called pickup and dropoff time Time Category labelling pea
 **Original**
 We can see from the image that we indeed have nulls that need to be handled
 
-![alt text](image-36.png)
+![null values shown](image-36.png)
 
 **Transformation**
 
 REMOVING EMPTY
 
-![alt text](image-37.png)
+![removing empty values](image-37.png)
 
 **Final**
 No more NULLS
 
-![alt text](image-38.png)
+![no more nulls](image-38.png)
 
 
 #### **Filtering OUTLIERS**
@@ -265,68 +265,108 @@ We can see from the FACT Table in the trip_distance column that there are some d
 
 **Original**
 
-![alt text](image-39.png)
+![proof od outliers ie 0](image-39.png)
 
 **Transformation**
 
 We decided to filter for numbers greater than zero
 
-![alt text](image-40.png)
+![filtering out 0](image-40.png)
 
 **Final**
 
 We can now see that there is no zero value
 
-![alt text](image-41.png)
+![filtered output without 0](image-41.png)
 
-#### **TEXT**
-**Original**
-
-**Transformation**
-
-**Final**
-
-#### **TEXT**
-**Original**
+#### **Removing Duplicates**
+The Dataset was too large to load accurate metrics but we removed duplicated from the ID section
 
 **Transformation**
 
+![transformation of removing duplicates](image-42.png)
+
 **Final**
 
-#### **TEXT**
-**Original**
+![duplicates removed](image-43.png)
+
+#### **Creating Custom Column(SPEED)**
+Speed column created using distance / duration /3600seconds to convert it into hours as the time in seconds is a little unseemly.
 
 **Transformation**
 
-**Final**
+![power query to create speed column](image-44.png)
 
-#### **TEXT**
-**Original**
+**Final**
+![speed column to 2 decimal places(fixed decimal)](image-45.png)
+
+#### **Merge Queries (Pickup Neighborhood Names)**
 
 **Transformation**
 
+![meging pickup neigbourhoods](image-46.png)
+
+![expanding the merge](image-47.png)
+
 **Final**
 
-#### **TEXT**
-**Original**
+![merged pickup](image-48.png)
+
+#### **Merge Queries (Dropoff Neighborhood Names)**
 
 **Transformation**
 
+![dropoff merge](image-49.png)
+
 **Final**
 
-#### **TEXT**
+![merged dropoff](image-50.png)
+
+#### **Replace Values (Decoding Payment Types)**
+
 **Original**
+
+![payment types as numbers](image-51.png)
 
 **Transformation**
 
+![1 as credit card](image-52.png)
+
+![2 as cash](image-53.png)
+
+![3 as no charge](image-54.png)
+
+![4 as disputed](image-55.png)
+
 **Final**
 
-#### **TEXT**
-**Original**
+![fully coded](image-56.png)
+
+# **Creating Dimensional Tables**
+
+## **Creating DIM_Date**
 
 **Transformation**
 
+![dax for DIM_DATE](image-62.png)
+
 **Final**
+
+![DIM_Date Created](image-63.png)
+
+
+## **Create DimTime (for hour-level analysis)**
+
+**Transformation**
+
+
+![Dim_Time Dax](image-61.png)
+
+![dax for column cateegorization](image-64.png)
+
+**Final**
+
+![DIM_time created](image-65.png)
 
 #### **TEXT**
 **Original**
