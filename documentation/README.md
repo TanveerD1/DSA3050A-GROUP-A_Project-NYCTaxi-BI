@@ -401,14 +401,249 @@ Speed column created using distance / duration /3600seconds to convert it into h
 
 
 ## **STAR SCHEMA**
-Dimension to FACT is alwasy one to MANY!
+Dimension to FACT is always one to MANY!
 
 ![STAR SCHEMA](image-73.png)
 
-# ADDITIONAL WRANGLING:
+# DAX DEVELOPMENT:
+
+## New Measures
+
+### Total Trips
+
+**Transformation**
+![new_measure process](image-74.png)
+
+![total_trips_dax](image-75.png)
+
+**Final**
+
+![total_trips_shown](image-76.png)
+
+### Total Distance 
+
+**Transformation**
+
+![total_distance_DAX](image-77.png)
+
+### Average Passengers
+
+**Transformation**
+
+![average passengers DAX](image-78.png)
+
+#### Year to Date YTD
+
+**Transformation**
+![YTD Dax](image-79.png)
 
 
+### Month to Date MTD
+
+**Transformation**
+
+![alt text](image-80.png)
+
+### Trips Year over Year Growth
+
+**Transformation**
+
+![yoy growth DAX](image-81.png)
+
+### Trips quarter over quarter Change
+
+**Transformation**
+
+![qoq dax](image-82.png)
+
+### Credit Card Percentage
+
+**Transformation**
+
+![credit card percentage DAX](image-83.png)
+
+### Cash percentage
+
+**Transformation**
+
+![cash percentage DAX](image-84.png)
+
+### Average Trip Duration (minutes)
+
+**Transformation**
+
+![average trip duration DAX](image-85.png)
+
+### Total Trips
+
+**Transformation**s
+
+**Final**
+
+#### **TEXT**
 **Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
+
+**Transformation**
+
+**Final**
+
+#### **TEXT**
+**Original**
+
+**Transformation**
+
+**Final**
+
+### Total Trips
 
 **Transformation**
 
