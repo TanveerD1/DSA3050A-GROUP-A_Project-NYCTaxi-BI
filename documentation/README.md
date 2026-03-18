@@ -94,10 +94,13 @@ revenue through better route and timing decisions.
 Ramireddy, S. (2023). New York City taxi rides [Data set]. Kaggle. 
 https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides
 
+---
+# Part 1: Transformations and DAX
+
 
 # Week 8 - Power query Transformations
 
-#### loading data into POWER BI
+#### Loading data into POWER BI
 loading all 3 datasets to powerBI for Transformation
 ![dropoff_neigbourhoods](image-6.png)
 
@@ -474,26 +477,22 @@ Dimension to FACT is always one to MANY!
 
 ![average trip duration DAX](image-85.png)
 
-### Total Trips
-
-**Transformation**s
-
-**Final**
-
-#### **TEXT**
-**Original**
+### Peak Hour Trips
 
 **Transformation**
 
-**Final**
+![peak hour trips dax](image.png)
 
-### Total Trips
+### Speed Categories
 
 **Transformation**
 
-**Final**
+![alt text](image-1.png)
 
-#### **TEXT**
+---
+# Part 2: Dashboard
+---
+
 **Original**
 
 **Transformation**
