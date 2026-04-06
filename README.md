@@ -1,94 +1,143 @@
-# 🚗 New YorK City Taxi Rides
 
-### Power BI Business Intelligence Project
+# 🚕 NYC Taxi BI Analysis: Data-Driven Urban Mobility
 
-**Course:** DSA3050A – Business Intelligence & Data Visualization
-**Students:** 
-- Tanveer 762
-- Mohamed 006
-- Mitchel 413
-- Calvin 035
-- Claire 
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white)](https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
+> **Course:** DSA3050A - Business Intelligence & Data Visualization  
+> **Project:** Group A - New York City Taxi Rides Analysis
 
-# Week 6 - Proposal
+---
 
-# Problem Statement
+## 🌟 Introduction
 
-New York City's taxi operations face challenges in optimizing fleet utilization, 
-understanding passenger demand patterns, and maximizing revenue across different 
-neighborhoods and time periods. This project analyzes NYC taxi trip data to 
-identify operational inefficiencies, peak demand periods, and neighborhood-level 
-performance metrics. The goal is to provide data-driven recommendations for 
-improving taxi availability, reducing passenger wait times, and increasing driver 
-revenue through better route and timing decisions.
+Welcome to the **NYC Taxi BI Analysis** project. New York City is one of the most complex urban environments in the world, and its taxi system is a vital artery of its transportation network. This project leverages the power of **Business Intelligence** to transform over 50,000 rows of raw taxi trip data into actionable insights.
 
-## Proof of Dataset legitimacy
-- Taxi rides dataset url(Taxi)
-![NYC Taxi dataset from official city records showing ride statistics, fare information, and pickup/dropoff locations for 2024 analysis](documentation/image-4.png)
-- Taxi rides website evidence
-![NYC Taxi dataset website homepage displaying ride data, fare calculations, and location information for 2024 taxi analytics project](documentation/image-5.png)
+By applying rigorous data cleaning, advanced star-schema modeling, and sophisticated DAX calculations, we aim to uncover the "pulse" of the city—identifying when, where, and how New Yorkers move.
 
-# Business Questions (Minimum 5)
+---
 
-1. What are the peak hours and days for taxi demand across different neighborhoods?
-2. Which neighborhoods generate the highest trip volumes and revenue?
-3. How does trip distance correlate with fare amount and payment type?
-4. What is the average trip duration and how does it vary by time of day?
-5. Which payment methods are most common and how do they vary by neighborhood?
-6. How many passengers typically ride together and does this affect trip distance?
-7. What is the relationship between pickup and dropoff neighborhoods (commuter patterns)?
+## 📍 Table of Contents
 
-# Entity Relationship Diagram Draft
+- [🚀 Project Roadmap](#-project-roadmap)
+- [🎯 Problem Statement](#-problem-statement)
+- [❓ Business Questions](#-business-questions)
+- [🏗️ Data Architecture](#-data-architecture)
+- [📂 Repository Structure](#-repository-structure)
+- [🛠️ Tech Stack & Methodology](#-tech-stack--methodology)
+- [👥 The Team](#-the-team)
+- [🔗 Quick Links](#-quick-links)
 
-## Source Tables
+---
 
-**trips_1.csv** (Fact Table - 50,000+ rows)
-- id (Primary Key)
-- vendor_id
-- pickup_datetime
-- dropoff_datetime
-- passenger_count
-- trip_distance
-- pickup_longitude
-- pickup_latitude
-- dropoff_longitude
-- dropoff_latitude
-- payment_type (1-6 code)
-- trip_duration
-- pickup_neighborhood (FK to pickup_neighborhoods)
-- dropoff_neighborhood (FK to dropoff_neighborhoods)
+## 🚀 Project Roadmap
 
-**pickup_neighborhoods.csv** (Dimension)
-- neighborhood_id (Primary Key)
-- neighborhood_name
+What lies ahead in this repository? We have structured our BI journey into five distinct phases:
 
-**dropoff_neighborhoods.csv** (Dimension)
-- neighborhood_id (Primary Key)
-- neighborhood_name
+1.  **Phase 1: Exploration & Proposal** 📋
+    *   Identifying dataset legitimacy and defining core business problems.
+2.  **Phase 2: Data Engineering (ETL)** ⚙️
+    *   Transforming raw CSVs using Power Query (handling nulls, outliers, and data types).
+3.  **Phase 3: Data Modeling** 🏗️
+    *   Designing a robust Star Schema for optimal performance and scalability.
+4.  **Phase 4: DAX Development** 📉
+    *   Crafting complex measures for Year-over-Year (YoY) growth, peak hour analysis, and efficiency metrics.
+5.  **Phase 5: Visualization & Insights** 🎨
+    *   Building an interactive Power BI dashboard to communicate findings effectively.
 
-## Planned Star Schema
+---
 
-**Fact Table:**
-- FactTrips (id, date_key, vendor_id, passenger_count, trip_distance, 
-  payment_type, trip_duration, pickup_neighborhood_key, dropoff_neighborhood_key)
+## 🎯 Problem Statement
 
-**Dimension Tables:**
-- DimDate (date_key, date, year, month, day, day_of_week, hour, quarter)
-- DimPickupNeighborhood (neighborhood_key, neighborhood_id, neighborhood_name)
-- DimDropoffNeighborhood (neighborhood_key, neighborhood_id, neighborhood_name)
-- DimPayment (payment_key, payment_code, payment_description)
-- DimVendor (vendor_key, vendor_id, vendor_name)
+NYC's taxi operations face significant challenges in **balancing supply and demand**. Inefficiencies in fleet utilization lead to long passenger wait times in some areas while drivers remain idle in others. 
 
-# Data Source
+**Our Goal:** To provide data-driven recommendations that improve taxi availability, reduce wait times, and maximize driver revenue through optimized route and timing decisions.
 
-**Dataset:** New York City taxi rides
-**Source:** Kaggle (https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides)
-**Files:**
-- trips_1.csv (Main trip records)
-- pickup_neighborhoods.csv (Pickup location lookup)
-- dropoff_neighborhoods.csv (Dropoff location lookup)
+---
 
-## Data Citation
-Ramireddy, S. (2023). New York City taxi rides [Data set]. Kaggle. 
-https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides
+## ❓ Business Questions
+
+We set out to answer seven critical questions that drive operational excellence:
+
+1.  **Peak Demand:** What are the peak hours and days across different neighborhoods?
+2.  **Revenue Hubs:** Which neighborhoods generate the highest trip volumes and revenue?
+3.  **Fare Correlation:** How does trip distance correlate with fare amount and payment type?
+4.  **Efficiency:** What is the average trip duration, and how does it vary by time of day?
+5.  **Payment Trends:** Which payment methods are most common, and do they vary by location?
+6.  **Passenger Dynamics:** How many passengers typically ride together?
+7.  **Commuter Patterns:** What is the relationship between pickup and dropoff neighborhoods?
+
+---
+
+## 🏗️ Data Architecture
+
+To ensure high performance, we implemented a **Star Schema** model. This structure separates our quantitative data (Facts) from our descriptive data (Dimensions).
+
+### The Star Schema
+![Star Schema](documentation/image-73.png)
+
+*   **Fact Table:** `FactTrips` (Trip ID, Date, Distance, Duration, Fare, etc.)
+*   **Dimensions:**
+    *   `DimDate`: Comprehensive calendar hierarchy.
+    *   `DimTime`: Hour-level analysis and Peak/Off-Peak categorization.
+    *   `DimPickupNeighborhood`: Geographical lookup for origins.
+    *   `DimDropoffNeighborhood`: Geographical lookup for destinations.
+    *   `DimPayment`: Decoding payment codes (Credit Card, Cash, etc.).
+
+---
+
+## 📂 Repository Structure
+
+```directory
+.
+├── 📂 data/                    # Source CSV files from Kaggle
+├── 📂 documentation/           # Detailed ETL process, DAX logic, and screenshots
+│   └── 📄 README.md            # Deep-dive into transformations
+├── 📂 pbix/                    # Final Power BI Desktop file
+│   └── 📄 README.md            # Dashboard usage guide
+├── 📂 presentation/            # Slides and presentation materials
+│   └── 📄 README.md            # Presentation structure & guide
+└── 📄 README.md                # Main project entry point (you are here)
+```
+
+---
+
+## 🛠️ Tech Stack & Methodology
+
+-   **Tool:** Microsoft Power BI
+-   **ETL:** Power Query M-Language
+-   **Logic:** DAX (Data Analysis Expressions)
+-   **Version Control:** Git & GitHub
+
+### Key DAX Metrics Developed:
+*   `Total Trips`: Count of all valid taxi rides.
+*   `Trips YoY Growth`: Comparing performance against the previous year.
+*   `Peak Hour Trips`: Filtering demand for high-traffic windows.
+*   `Average Speed (MPH)`: Derived from distance and duration to identify congestion.
+
+---
+
+## 👥 The Team
+
+We are a group of dedicated students from **DSA3050A**, passionate about data and urban mobility.
+
+| Name | Student ID (Last 3) |
+| :--- | :--- |
+| **Tanveer Omar** | 762 |
+| **Mohamed Mohamed** | 006 |
+| **Mitchel Muthaura** | 413 |
+| **Calvin Gacheru** | 035 |
+| **Claire** | 042 |
+| **Lavender Nchagwa** | 043 |
+
+---
+
+## 🔗 Quick Links
+
+-   **Kaggle Dataset:** [NYC Taxi Rides](https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides)
+-   **Presentation Slides:** [Google Slides](https://docs.google.com/presentation/d/1Y9mi9wlte_jByuIBo5VOkpEVG015vHF-8lsqFSNJjXo/edit?usp=sharing)
+-   **Detailed Documentation:** [View Transformation Process](./documentation/README.md)
+
+---
+
