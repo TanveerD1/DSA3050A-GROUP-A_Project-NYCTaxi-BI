@@ -7,7 +7,7 @@
 - Tanveer 762
 - Mohamed 006
 - Mitchel 413
-- Calvin 670035
+- Calvin 035
 - Claire 
 
 
@@ -24,10 +24,10 @@ improving taxi availability, reducing passenger wait times, and increasing drive
 revenue through better route and timing decisions.
 
 ## Proof of Dataset legitimacy
--Taxi rides dataset url(Taxi)
-![NYC Taxi dataset from official city records showing ride statistics, fare information, and pickup/dropoff locations for 2024 analysis](image-4.png)
+- Taxi rides dataset url(Taxi)
+![NYC Taxi dataset from official city records showing ride statistics, fare information, and pickup/dropoff locations for 2024 analysis](documentation/image-4.png)
 - Taxi rides website evidence
-![NYC Taxi dataset website homepage displaying ride data, fare calculations, and location information for 2024 taxi analytics project](image-5.png)
+![NYC Taxi dataset website homepage displaying ride data, fare calculations, and location information for 2024 taxi analytics project](documentation/image-5.png)
 
 # Business Questions (Minimum 5)
 
