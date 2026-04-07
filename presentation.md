@@ -42,7 +42,7 @@ To solve this, we must analyze and synchronize three critical factors:
 
 # Slide 3: Problem Statement
 
-NYC's taxi operations face significant challenges in balancing supply and demand. Inefficiencies lead to long passenger wait times and idle drivers. 
+NYC's taxi operations face significant challenges in balancing supply and demand. Inefficiencies lead to long passenger wait times and idle driverjkdfvnks.
 
 **Why Analytics?**
 - To optimize fleet utilization and route planning.
