@@ -10,7 +10,7 @@
 
 ---
 
-## 🌟 Introduction
+## Introduction
 
 Welcome to the **NYC Taxi BI Analysis** project. New York City is one of the most complex urban environments in the world, and its taxi system is a vital artery of its transportation network. This project leverages the power of **Business Intelligence** to transform over 50,000 rows of raw taxi trip data into actionable insights.
 
@@ -18,37 +18,37 @@ By applying rigorous data cleaning, advanced star-schema modeling, and sophistic
 
 ---
 
-## 📍 Table of Contents
+## Table of Contents
 
-- [🚀 Project Roadmap](#-project-roadmap)
-- [🎯 Problem Statement](#-problem-statement)
-- [❓ Business Questions](#-business-questions)
-- [🏗️ Data Architecture](#-data-architecture)
-- [📂 Repository Structure](#-repository-structure)
-- [🛠️ Tech Stack & Methodology](#-tech-stack--methodology)
-- [👥 The Team](#-the-team)
-- [🔗 Quick Links](#-quick-links)
+- [Project Roadmap](#-project-roadmap)
+- [Problem Statement](#-problem-statement)
+- [Business Questions](#-business-questions)
+- [Data Architecture](#-data-architecture)
+- [Repository Structure](#-repository-structure)
+- [Tech Stack & Methodology](#-tech-stack--methodology)
+- [The Team](#-the-team)
+- [Quick Links](#-quick-links)
 
 ---
 
-## 🚀 Project Roadmap
+## Project Roadmap
 
 What lies ahead in this repository? We have structured our BI journey into five distinct phases:
 
-1.  **Phase 1: Exploration & Proposal** 📋
+1.  **Phase 1: Exploration & Proposal** 
     *   Identifying dataset legitimacy and defining core business problems.
-2.  **Phase 2: Data Engineering (ETL)** ⚙️
+2.  **Phase 2: Data Engineering (ETL)** 
     *   Transforming raw CSVs using Power Query (handling nulls, outliers, and data types).
-3.  **Phase 3: Data Modeling** 🏗️
+3.  **Phase 3: Data Modeling** 
     *   Designing a robust Star Schema for optimal performance and scalability.
-4.  **Phase 4: DAX Development** 📉
+4.  **Phase 4: DAX Development** 
     *   Crafting complex measures for Year-over-Year (YoY) growth, peak hour analysis, and efficiency metrics.
-5.  **Phase 5: Visualization & Insights** 🎨
+5.  **Phase 5: Visualization & Insights** 
     *   Building an interactive Power BI dashboard to communicate findings effectively.
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 NYC's taxi operations face significant challenges in **balancing supply and demand**. Inefficiencies in fleet utilization lead to long passenger wait times in some areas while drivers remain idle in others. 
 
@@ -56,7 +56,7 @@ NYC's taxi operations face significant challenges in **balancing supply and dema
 
 ---
 
-## ❓ Business Questions
+## Business Questions
 
 We set out to answer seven critical questions that drive operational excellence:
 
@@ -70,7 +70,7 @@ We set out to answer seven critical questions that drive operational excellence:
 
 ---
 
-## 🏗️ Data Architecture
+## Data Architecture
 
 To ensure high performance, we implemented a **Star Schema** model. This structure separates our quantitative data (Facts) from our descriptive data (Dimensions).
 
@@ -87,23 +87,23 @@ To ensure high performance, we implemented a **Star Schema** model. This structu
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```directory
 .
-├── 📂 data/                    # Source CSV files from Kaggle
-├── 📂 documentation/           # Detailed ETL process, DAX logic, and screenshots
-│   └── 📄 README.md            # Deep-dive into transformations
-├── 📂 pbix/                    # Final Power BI Desktop file
-│   └── 📄 README.md            # Dashboard usage guide
-├── 📂 presentation/            # Slides and presentation materials
-│   └── 📄 README.md            # Presentation structure & guide
-└── 📄 README.md                # Main project entry point (you are here)
+├── data/                    # Source CSV files from Kaggle
+├── documentation/           # Detailed ETL process, DAX logic, and screenshots
+│   └── README.md            # Deep-dive into transformations
+├── pbix/                    # Final Power BI Desktop file
+│   └── README.md            # Dashboard usage guide
+├── presentation/            # Slides and presentation materials
+│   └── README.md            # Presentation structure & guide
+└── README.md                # Main project entry point (you are here)
 ```
 
 ---
 
-## 🛠️ Tech Stack & Methodology
+## Tech Stack & Methodology
 
 -   **Tool:** Microsoft Power BI
 -   **ETL:** Power Query M-Language
@@ -118,7 +118,7 @@ To ensure high performance, we implemented a **Star Schema** model. This structu
 
 ---
 
-## 👥 The Team
+## The Team
 
 We are a group of dedicated students from **DSA3050A**, passionate about data and urban mobility.
 
@@ -129,7 +129,7 @@ We are a group of dedicated students from **DSA3050A**, passionate about data an
 | **Mitchel Muthaura** | 413 |
 | **Calvin Gacheru** | 035 |
 | **Claire** | 042 |
-| **Lavender Nchagwa** | 043 |
+| **Lavender Nchagwa** | 617 |
 
 ---
 
