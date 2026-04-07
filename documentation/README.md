@@ -9,7 +9,8 @@
 - Mitchel 413
 - Calvin 035
 - Claire 470
-- Lavender 
+- Lavender 647
+
 
 
 # Week 6 - Proposal
