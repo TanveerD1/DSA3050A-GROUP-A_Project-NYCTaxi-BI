@@ -18,7 +18,37 @@ Located at the top of the dashboard, these cards provide a quick snapshot of ove
 * **Narrative:** Offers a text-based summary and insights about the relationships between variables and their impact on total trips, helping to contextualize the visual findings.
 
 ---
+## Page 2: Trip Behavior & Operational Insights
 
+### Purpose
+My dashboard page focuses on analyzing trip behavior, demand distribution, and operational patterns within the NYC Taxi dataset. The goal is to move beyond high-level summaries and provide data-driven insights into how trips vary across time, passenger composition, payment methods, and geographic locations.
+
+### Interactive Slicers
+#### **Time Category Slicer**
+  This slicer enables users to filter the dashboard based on different periods of the day (e.g., morning, afternoon, evening, night).
+
+#### **Payment Method Slicer**
+  This slicer allows users to isolate trips by payment type.
+
+### Visuals
+
+#### 1. **Trips by Hour and Time Category (Clustered Column Chart)**
+  This visual captures demand patterns by hour of the day, sectioned into broader time categories.
+
+#### 2. **Passenger Count Distribution (Stacked Column Chart)**
+  This chart analyzes how trips are distributed based on the number of passengers.
+
+#### 3. **Payment Method Distribution (Donut Chart)**
+  This visual highlights customer payment preferences.
+
+#### 4. **Pickup Location Demand (Azure Map)**
+  The map provides a geospatial view of trip demand, identifying high-activity pickup zones.
+
+#### 5. **Neighborhood Performance Matrix (Matrix Table)**
+  This matrix shows a combines demand and trip characteristics.
+
+
+---
 ## Page 3
 
 ## Key Performance Indicators (KPIs)
