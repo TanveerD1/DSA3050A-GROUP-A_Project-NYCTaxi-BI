@@ -18,7 +18,7 @@ Located at the top of the dashboard, these cards provide a quick snapshot of ove
 * **Narrative:** Offers a text-based summary and insights about the relationships between variables and their impact on total trips, helping to contextualize the visual findings.
 
 ---
-## Page 2: Trip Behavior & Operational Insights
+## Page 2
 
 ### Purpose
 My dashboard page focuses on analyzing trip behavior, demand distribution, and operational patterns within the NYC Taxi dataset. The goal is to move beyond high-level summaries and provide data-driven insights into how trips vary across time, passenger composition, payment methods, and geographic locations.
