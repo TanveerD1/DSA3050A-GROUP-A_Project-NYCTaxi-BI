@@ -128,7 +128,7 @@ We are a group of dedicated students from **DSA3050A**, passionate about data an
 | **Mohamed Mohamed** | 006 |
 | **Mitchel Muthaura** | 413 |
 | **Calvin Gacheru** | 035 |
-| **Claire** | 042 |
+| **Claire** | 470 |
 | **Lavender Nchagwa** | 647 |
 
 ---

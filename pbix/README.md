@@ -12,7 +12,7 @@ Located at the top of the dashboard, these cards provide a quick snapshot of ove
 
 ### Visualizations
 * **Pie Chart:** Displays the proportional breakdown of total trips across different categorical variables, allowing you to see the relative contribution of each segment to the overall trip volume.
-* **Doughnut Chart:** Similar to the pie chart but with an alternative visual representation, showing how different categories share the total trips metric.
+* **Donut Chart:** Similar to the pie chart but with an alternative visual representation, showing how different categories share the total trips metric.
 * **Column Chart:** Illustrates the distribution of trips across numerical or categorical dimensions, making it easy to identify which categories have the highest trip volumes.
 * **Table:** Provides detailed, row-level data with specific metrics for each category, enabling users to see exact numbers and perform detailed analysis.
 * **Narrative:** Offers a text-based summary and insights about the relationships between variables and their impact on total trips, helping to contextualize the visual findings.
