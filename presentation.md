@@ -1,5 +1,17 @@
 ---
 marp: true
+theme: uncover
+class: invert
+style: |
+  section {
+    background-color: #1e1e1e;
+  }
+  h1 {
+    color: #00d2ff;
+  }
+  strong {
+    color: #ffca28;
+  }
 ---
 # NYC Taxi BI Analysis 
 
@@ -44,13 +56,14 @@ To solve this, we must analyze and synchronize three critical factors:
 ![NYC Taxi dataset website homepage displaying ride data, fare calculations, and location information for 2024 taxi analytics project](documentation/image-5.png)
 
 ---
-
 **Executive Summary of the data**
 
 **Executive Summary: NYC Taxi Trip Duration Analysis**
 
 * **Dataset Scope:** Analysis of 50,000+ trip records from three distinct taxi vendors to identify urban traffic patterns and mobility trends.
 * **Temporal & Spatial Variables:** Integration of precise pickup/drop-off timestamps and geographic coordinates (latitude/longitude) mapped to specific NYC neighborhoods.
+
+---
 * **Operational Metrics:** Tracking of passenger counts, trip distances (miles), and payment types (Credit, Cash, etc.) to evaluate service usage.
 * **Primary Objective:** Modeling **trip_duration** as the target variable to optimize vehicle dispatching and predict fleet availability for subsequent trips.
 * **Strategic Goal:** Leveraging dependency analysis between trip variables to minimize idle time and improve taxi assignment efficiency across high-demand zones.
@@ -74,6 +87,9 @@ The dataset underwent rigorous cleaning and transformation to ensure high-qualit
 
 - **Promoted Headers**: Set the first row as headers for accurate column identification.
 - **Renamed Queries**: Standardized naming conventions (e.g., changing trips_1 to FACT_trips).
+
+---
+
 - **Removed Columns**: Deleted redundant latitude and longitude columns from the Fact table, as they exist in Dimension tables.
 - **Fixed Data Types**: Corrected types for numerical and datetime fields.
 
@@ -96,6 +112,9 @@ The dataset underwent rigorous cleaning and transformation to ensure high-qualit
 ## Dimensional Modeling & Optimizations
 - **Star Schema Implementation**: Structured the data with one central Fact table (FACT_trips) surrounded by descriptive Dimension tables.
 - **One-to-Many Relationships**: Established single-direction, one-to-many relationships connecting Dimension tables (Date, Time, Payment, Pickups, Dropoffs) to the Fact table.
+
+---
+
 - **Data Reduction**: Optimized model size and performance by dropping duplicate rows and redundant geographical coordinates early in the transformation process.
 
 ---
@@ -105,6 +124,9 @@ The dataset underwent rigorous cleaning and transformation to ensure high-qualit
 - **DIM_Date Table**: Created using CALENDAR and ADDCOLUMNS to extract Year, Month, Day, Weekday, Quarter, etc.
 - **DIM_Payment Table**: Hardcoded using DATATABLE to map codes (1-4) to strings ("Credit Card", "Cash", etc.).
 - **Total Trips**: Total_Trips = COUNTROWS(FACT_trips).
+
+---
+
 - **Total Distance**: Total_Distance = SUM(FACT_trips[trip_distance]).
 - **Average Passengers**: Average_Passengers = AVERAGE(FACT_trips[passenger_count]).
 - **Average Duration (Mins)**: Avg_Duration_Minutes = AVERAGE(FACT_trips[trip_duration]) / 60.
@@ -115,6 +137,9 @@ The dataset underwent rigorous cleaning and transformation to ensure high-qualit
 - **Trips MTD**: Trips_MTD = TOTALMTD([Total_Trips], DIM_Date[Date]).
 - **Credit Card %**: Credit Card % = DIVIDE(CALCULATE([Total_Trips], FACT_trips[payment_type] = 1), [Total_Trips], 0).
 - **Cash %**: Cash % = DIVIDE(CALCULATE([Total_Trips], FACT_trips[payment_type] = 2), [Total_Trips], 0).
+
+---
+
 - **Peak Hour Trips**: Peak Hour Trips = CALCULATE([Total_Trips], DIM_Time[TimeCategory] = "Peak").
 - **Trips YoY Growth**: Calculates current year trips minus previous year trips (using SAMEPERIODLASTYEAR), divided by previous year trips.
 - **Trips QoQ Change**: Compares current quarter trips against previous quarter trips using PREVIOUSQUARTER.
@@ -126,11 +151,13 @@ The dataset underwent rigorous cleaning and transformation to ensure high-qualit
 
 
 ---
-  #  Strategic Business Questions
 
+  #  Strategic Business Questions
  -  **Wait Times in High-Value Zones:** Which high-value pickup zones (e.g., AH or Z) see the longest wait times, and what is the estimated revenue loss from passenger abandonment?
 
 - **"Deadhead" Mileage Impact:** What is the current ratio of "empty miles" for drop-offs in outer neighborhoods, and how does this erode the fleet’s net margin?
+
+---
 
 - **Route Efficiency Bottlenecks:**  On which corridors does trip duration disproportionately exceed distance, and are these trips currently operating at a loss?
 
@@ -148,6 +175,9 @@ The dataset underwent rigorous cleaning and transformation to ensure high-qualit
 # Strategic Insights & Recommendations
 - **Demand & Supply Synchronization:** Utilize predictive rebalancing and shift synchronization to align driver availability with historical peaks, reducing passenger abandonment and driver churn.
 
+---
+
+
 - **Asset & Margin Optimization:** Minimize unprofitable "deadhead" mileage and underutilized vehicle capacity through dynamic return-trip incentives and the introduction of shared-ride tiers.
 
 - **Operational Velocity:** Increase the "trips-per-hour" metric by incentivizing digital payments to reduce transaction friction and standardizing high-performing vendor dispatch algorithms fleet-wide.
@@ -158,16 +188,22 @@ The dataset underwent rigorous cleaning and transformation to ensure high-qualit
 # Conclusion
 
 
-This project used business intelligence and data modeling to address inefficiencies in New York City’s taxi system. By transforming over 50,000 trip records into actionable insights, we identified demand patterns, key revenue areas, and operational challenges. The findings informed strategies to optimize fleet allocation, reduce wait times, and increase driver revenue. An interactive Power BI dashboard supports real-time, data-driven decision-making, successfully achieving the goal of smarter urban mobility.
+This project used business intelligence and data modeling to address inefficiencies in New York City’s taxi system. By transforming over 50,000 trip records into actionable insights, we identified demand patterns, key revenue areas, and operational challenges. The findings informed strategies to optimize fleet allocation, reduce wait times, and increase driver revenue.
+
+---
+
+An interactive Power BI dashboard supports real-time, data-driven decision-making, successfully achieving the goal of smarter urban mobility.
 
 
 ---
-# Refferences
+# References
 
 **Dataset**
 - NYC Taxi Trip Duration Dataset: https://www.kaggle.com/datasets/competitions/nyc-taxi-trip-duration/data
 
-**Power BI Documentation**
+**Link to the Power BI Dashboard**:
+[Power BI Dashboard](https://app.powerbi.com/groups/me/reports/f9382bb8-35cc-4344-aace-fb1207f068c9/40a24eb88e3a7afbd37a?experience=power-bi)
+
 
 
 
