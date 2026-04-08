@@ -20,10 +20,9 @@ Lavender Nchagwa
 # Problem Statement  
 
 **1. The Strategic Gap**
-
 New York City’s taxi ecosystem suffers from a misalignment between dynamic passenger demand and active vehicle supply.
 
-The Result: High idle times for drivers in quiet zones and excessive wait times for passengers in high-traffic neighborhoods.
+**The Result:** High idle times for drivers in quiet zones and excessive wait times for passengers in high-traffic neighborhoods.
 
 ---
 
@@ -125,142 +124,94 @@ The dataset underwent rigorous cleaning and transformation to ensure high-qualit
 
 ![alt text](documentation/dash1.png)
 
+
 ---
+  #  Strategic Business Questions
 
+ -  **Wait Times in High-Value Zones:** Which high-value pickup zones (e.g., AH or Z) see the longest wait times, and what is the estimated revenue loss from passenger abandonment?
 
+- **"Deadhead" Mileage Impact:** What is the current ratio of "empty miles" for drop-offs in outer neighborhoods, and how does this erode the fleet’s net margin?
 
+- **Route Efficiency Bottlenecks:**  On which corridors does trip duration disproportionately exceed distance, and are these trips currently operating at a loss?
 
+- **Vehicle Capacity Utilization:** Given the frequency of single-passenger rides, what is the untapped revenue potential of maximizing the "per-seat" value of the fleet?
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Slide 6: Data Architecture & Star Schema
-
-**Fact Table:**
-- FactTrips (id, date_key, vendor_id, passenger_count, trip_distance, payment_type, trip_duration, pickup_neighborhood_key, dropoff_neighborhood_key)
-
-**Dimension Tables:**
-- DimDate (date_key, year, month, day, hour, etc.)
-- DimPickupNeighborhood (neighborhood_key, name)
-- DimDropoffNeighborhood (neighborhood_key, name)
-- DimPayment (payment_key, code, description)
-- DimVendor (vendor_key, id, name)
-
-**Visual:**
-![Star Schema](documentation/image-73.png)
-
-
+- **Transaction Friction:** To what extent does payment type (cash vs. credit card) correlate with idling time between trips?
 
 ---
 
-# Slide 7: ETL & Data Transformation (Power Query)
+- **Vendor Performance Benchmarking:**   What specific operational protocols allow one vendor to consistently outperform the other in efficiency for identical distances?
 
-- **Header Promotion:** Ensured correct column names ([image-12](documentation/image-12.png))
-- **Column Pruning:** Removed redundant geolocation columns ([image-15](documentation/image-15.png))
-- **Data Type Fixes:** Standardized datetime, integer, and categorical fields ([image-18](documentation/image-18.png), [image-24](documentation/image-24.png))
-- **Splitting Date/Time:** Extracted date and time for temporal analysis ([image-27](documentation/image-27.png), [image-29](documentation/image-29.png))
-- **Conditional Columns:** Labeled peak/off-peak hours ([image-35](documentation/image-35.png))
-- **Null Handling:** Removed nulls from dimension tables ([image-38](documentation/image-38.png))
-- **Outlier Filtering:** Excluded zero-distance trips ([image-41](documentation/image-41.png))
-- **Duplicate Removal:** Ensured unique trip IDs ([image-43](documentation/image-43.png))
-- **Custom Columns:** Calculated speed ([image-45](documentation/image-45.png))
-- **Merges:** Added neighborhood names ([image-48](documentation/image-48.png), [image-50](documentation/image-50.png))
-- **Payment Decoding:** Replaced codes with descriptions ([image-56](documentation/image-56.png))
+- **Supply-Demand Alignment:**   How is over-supply during identified low-demand windows impacting individual driver earnings and long-term retention.
 
 ---
+# Strategic Insights & Recommendations
+- **Demand & Supply Synchronization:** Utilize predictive rebalancing and shift synchronization to align driver availability with historical peaks, reducing passenger abandonment and driver churn.
 
-# Slide 8: Dimensional Modeling
+- **Asset & Margin Optimization:** Minimize unprofitable "deadhead" mileage and underutilized vehicle capacity through dynamic return-trip incentives and the introduction of shared-ride tiers.
 
-- **DimDate:** Created for time-based analysis ([image-63](documentation/image-63.png))
-- **DimTime:** Hour-level granularity ([image-65](documentation/image-65.png))
-- **DimPayment:** Decoded payment types ([image-67](documentation/image-67.png))
-- **Relationships:** One-to-many from dimensions to fact ([image-68](documentation/image-68.png)–[image-72](documentation/image-72.png))
+- **Operational Velocity:** Increase the "trips-per-hour" metric by incentivizing digital payments to reduce transaction friction and standardizing high-performing vendor dispatch algorithms fleet-wide.
 
----
+- **Revenue Protection:** Mitigate the impact of traffic bottlenecks on daily turnover by implementing congestion surcharges or strategic drop-off points near major transit hubs.
 
-# Slide 9: Optimization Techniques
+--- 
+# Conclusion
 
-- **Star Schema:** Reduces query complexity and improves performance
-- **Column Pruning:** Minimizes memory usage
-- **Data Types:** Ensures efficient storage and calculation
-- **Indexing (Power BI):** Implicit via relationships and columnar storage
-- **Materialized Views:** Achieved via summary tables and DAX measures
 
-**Why?**
-- To enable fast, interactive dashboards
-- To support large-scale analytics without performance bottlenecks
+This project used business intelligence and data modeling to address inefficiencies in New York City’s taxi system. By transforming over 50,000 trip records into actionable insights, we identified demand patterns, key revenue areas, and operational challenges. The findings informed strategies to optimize fleet allocation, reduce wait times, and increase driver revenue. An interactive Power BI dashboard supports real-time, data-driven decision-making, successfully achieving the goal of smarter urban mobility.
+
 
 ---
+# Refferences
 
-# Slide 10: Analytical DAX Measures
+**Dataset**
+- NYC Taxi Trip Duration Dataset: https://www.kaggle.com/datasets/competitions/nyc-taxi-trip-duration/data
 
-- **Total Trips:** [image-75](documentation/image-75.png)
-- **Total Distance:** [image-77](documentation/image-77.png)
-- **Average Passengers:** [image-78](documentation/image-78.png)
-- **YTD/MTD/YoY Growth:** [image-79](documentation/image-79.png), [image-80](documentation/image-80.png), [image-81](documentation/image-81.png)
-- **QoQ Change:** [image-82](documentation/image-82.png)
-- **Payment Method %:** [image-83](documentation/image-83.png), [image-84](documentation/image-84.png)
-- **Average Trip Duration:** [image-85](documentation/image-85.png)
-- **Peak Hour Trips:** [image](documentation/image.png)
-- **Speed Categories:** [image-1](documentation/image-1.png)
+**Power BI Documentation**
 
-**Why DAX?**
-- Enables advanced, dynamic analytics
-- Supports business-focused KPIs
 
----
 
-# Slide 11: Power BI Dashboard Overview
 
-- **KPIs:** Total Distance, Total Trips, Avg. Duration ([pbix/dashboard1.jpeg](pbix/dashboard1.jpeg))
-- **Visuals:** Pie, doughnut, column charts, maps ([pbix/dashboard2.png](pbix/dashboard2.png), [pbix/dashboard3.png](pbix/dashboard3.png), [pbix/dashboard4.png](pbix/dashboard4.png))
-- **Interactivity:** Slicers for hour, payment method, etc.
-- **Geospatial Analysis:** Pickup/dropoff maps
 
----
 
-# Slide 12: Key Insights & Recommendations
 
-- **Peak Demand:** Identified by hour and neighborhood
-- **Revenue Drivers:** Top neighborhoods and payment types
-- **Operational Efficiency:** Outlier and null handling improved data quality
-- **Actionable Recommendations:**
-  - Adjust fleet allocation to match peak demand
-  - Incentivize drivers for underserved areas/times
-  - Promote efficient payment methods
 
----
 
-# Slide 13: Conclusion
 
-- BI and data modeling enable smarter urban mobility decisions
-- Power BI dashboards provide actionable, real-time insights
-- Data-driven strategies can optimize both passenger experience and driver revenue
 
----
 
-# Slide 14: References
 
-- Kaggle Dataset: https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides
-- Course: DSA3050A - Business Intelligence & Data Visualization
-- All images and visuals from this repository
 
-- **Dataset:** New York City taxi rides ([Kaggle](https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
