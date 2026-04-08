@@ -92,14 +92,28 @@ To ensure high performance, we implemented a **Star Schema** model. This structu
 ```directory
 .
 ├── data/                    # Source CSV files from Kaggle
-├── documentation/           # Detailed ETL process, DAX logic, and screenshots
-│   └── README.md            # Deep-dive into transformations
-├── pbix/                    # Final Power BI Desktop file
-│   └── README.md            # Dashboard usage guide
-├── presentation/            # Slides and presentation materials
-│   └── README.md            # Presentation structure & guide
+│   └── new york city taxi rides/  # Raw CSV dataset used for analysis
+├── documentation/           # Detailed ETL process, data modeling, and DAX logic
+│   └── README.md            # Deep dive into transformations, schema design, and screenshots
+├── pbix/                    # Power BI report and exported dashboard assets
+│   ├── GROUP-A_Ny-Taxis.pbix  # Power BI Desktop report file
+│   ├── README.md            # Dashboard page guides and usage notes
+│   ├── dashboard1.jpeg
+│   ├── dashboard2.png
+│   ├── dashboard3.png
+│   └── dashboard4.png
+├── presentation/            # Presentation planning and slide guidance
+│   └── README.md            # Recommended deck structure and speaker notes
 └── README.md                # Main project entry point (you are here)
 ```
+
+---
+
+## Local Project Guides
+
+- [Detailed Documentation](./documentation/README.md): complete ETL, Power Query transformations, star schema planning, and modelling notes.
+- [Power BI Guide](./pbix/README.md): dashboard page descriptions, KPIs, slicer behavior, and user guidance for the report.
+- [Presentation Guide](./presentation/README.md): recommended presentation flow, slide structure, and project storytelling notes.
 
 ---
 
@@ -128,8 +142,8 @@ We are a group of dedicated students from **DSA3050A**, passionate about data an
 | **Mohamed Mohamed** | 006 |
 | **Mitchel Muthaura** | 413 |
 | **Calvin Gacheru** | 035 |
-| **Claire** | 042 |
-| **Lavender Nchagwa** | 617 |
+| **Claire** | 470 |
+| **Lavender Nchagwa** | 647 |
 
 ---
 
@@ -138,6 +152,9 @@ We are a group of dedicated students from **DSA3050A**, passionate about data an
 -   **Kaggle Dataset:** [NYC Taxi Rides](https://www.kaggle.com/datasets/surekharamireddy/new-york-city-taxi-rides)
 -   **Presentation Slides:** [Google Slides](https://docs.google.com/presentation/d/1Y9mi9wlte_jByuIBo5VOkpEVG015vHF-8lsqFSNJjXo/edit?usp=sharing)
 -   **Detailed Documentation:** [View Transformation Process](./documentation/README.md)
+-   **Power BI Dashboard Guide:** [Open pbix/README.md](./pbix/README.md)
+-   **Presentation Planning Guide:** [Open presentation/README.md](./presentation/README.md)
+-   **Power BI Report File:** `pbix/GROUP-A_Ny-Taxis.pbix`
 
 ---
 
